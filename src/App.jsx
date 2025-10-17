@@ -5,7 +5,7 @@ import Project from './pages/Project'
 
 const App = () => {
   return (
-    <div className='min-w-screen min-h-screen bg-zinc-800 text-zinc-100'>
+    <div className='max-w-screen overflow-x-hidden min-h-screen bg-zinc-100 text-zinc-950'>
       <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/agence' element={<Agence/>} />
