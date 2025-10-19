@@ -48,7 +48,7 @@ const Agence = () => {
     <div>
       <div
         id="section-1"
-        className="max-w-screen box-border overflow-x-hidden selection:bg-[#FFFF00]/80 relative"
+        className="max-w-screen box-border overflow-x-hidden selection:bg-[#FFFF00]/80 relative bg-zinc-50"
       >
         {/* #Team Images */}
         <div
