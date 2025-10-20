@@ -11,7 +11,11 @@ const TopText = () => {
             </div>
             things
         </div>
-        <div>creative</div>
+        <div>
+          <span>
+            creative
+          </span>
+        </div>
     </div>
   )
 }

@@ -30,16 +30,21 @@ const Agence = () => {
     gsap.to(imageDivRef.current, {
       scrollTrigger: {
         trigger: imageDivRef.current,
-        markers: true,
+        // markers: true,
         start: "top 20%",
-        end: "top -95%",
+        end: "top -100%",
         pin: true,
-        onUpdate: (e)=> {
-            if (e.progress < 1){
-                const imageIndex = Math.floor(e.progress*imageArray.length)
-                imageRef.current.src = imageArray[imageIndex]
-            }
-        }
+        pinSpacing: true,
+        pinReparent: true,
+        pinType: 'transform',
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        onUpdate: (e) => {
+          if (e.progress < 1) {
+            const imageIndex = Math.floor(e.progress * imageArray.length);
+            imageRef.current.src = imageArray[imageIndex];
+          }
+        },
       },
     });
   });
@@ -73,7 +78,7 @@ const Agence = () => {
           </div>
 
           {/* about */}
-          <div className="max-w-full boder-box overflow-x-hidden flex justify-end p-10  mt-44 text-zinc-950 font-semibold text-4xl">
+          <div className="max-w-full boder-box overflow-x-hidden flex justify-end p-10  mt-44 text-zinc-950 font-semibold text-4xl relative">
             <div className="w-[60%] text-">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               We’re inquisitive and open-minded, and we make sure creativity

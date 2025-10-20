@@ -37,17 +37,17 @@ const Stairs = (prop) => {
       y: "0%",
     });
 
-    gsap.from(appBox.current, {
-        opacity: 0,
-        delay: 1.3,
-        scale: 1.5
-    })
+    // gsap.from(appBox.current, {
+    //     opacity: 0,
+    //     delay: 1.3,
+    //     scale: 1.5
+    // })
 
   }, [currentPath]);
 
   return (
     <div>
-      <div ref={stairBox} className="w-full h-screen z-20 fixed top-0">
+      <div ref={stairBox} className="w-full h-screen z-20 fixed top-0 bg-[#ffffffcc]">
         <div className="w-full h-full flex">
           <div className="stair h-full w-1/6 bg-black "></div>
           <div className="stair h-full w-1/6 bg-black "></div>
