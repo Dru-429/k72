@@ -3,17 +3,19 @@ import Home from "./pages/Home";
 import Agence from "./pages/Agence";
 import Project from "./pages/Project";
 import Navbar from "./pages/components/common/Navbar";
+import FullScreenNav from "./pages/components/common/FullScreenNav";
 
 const App = () => {
 
   return (
     <div className="max-w-screen overflow-x-hidden min-h-screen bg-black  text-zinc-950">
-      <Navbar />
-      <Routes>
+      {/* <Navbar /> */}
+      <FullScreenNav />
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/agence" element={<Agence />} />
         <Route path="/project" element={<Project />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 };
