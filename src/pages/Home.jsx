@@ -1,8 +1,9 @@
-import BottomLinks from "./components/home/BottomLinks";
-import TopText from "./components/home/TopText";
-import Video from "./components/home/Video";
+import TopText from "../components/home/TopText";
+import Video from "../components/home/Video";
+import BottomLinks from "../components/home/BottomLinks";
 
 const Home = () => {
+
   return (
     <div className="w-screen h-screen relative">
       <div className="w-full h-full blur-[4px] fixed">
