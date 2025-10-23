@@ -3,26 +3,24 @@ import { useEffect, useRef } from "react";
 
 const FullScreenNav = () => {
 
-  let xPercentage = 0
-  let direction = -1
+  const scrollBox = useRef(null)
 
-  const firstDiv = useRef(null)
-  // const secondDiv = useRef(null)
+  useEffect(() => {
+    
+    const items = scrollBox.current.querySelectorAll('.scrollItem')
+    gsap.to(items, {
+      xPercent: -100 * items.length,
+      repeat: -1,
+      ease: "none",
+      duration: 20,
+      modifiers: {
+        xPercent: gsap.utils.wrap(-100 * items.length, 0)
+      }
+    });
+  }, [])
 
-  useEffect( () => {
-    requestAnimationFrame(animation)
-  },[])
-
-  const animation = () => {
-    if(xPercentage <= -800){
-      xPercentage = 0
-    }
-
-    gsap.set(firstDiv.current, {x:xPercentage})
-    // gsap.set(secondDiv.current, {x:xPercentage})
-    xPercentage += 0.8*direction
-    requestAnimationFrame(animation)
-  }
+  
+  
 
   return (
     <div className="w-screen h-screen bg-black">
@@ -51,17 +49,29 @@ const FullScreenNav = () => {
       </nav>
 
       {/* /Links */}
-      <div className="w-full h-[80%] overflow-x-hidden">
+      <div className="w-full h-[80%] overflow-x-hidden pt-20">
         {/* /work */}
-        <div className="h-[40%]">
-          <div className="h-1/2 pb-3 box-border uppercase font-semibold text-[7vw] text-zinc-50 border-y-1 border-zinc-50 text-center leading-none ">
+        <div className="h-[20%] relative">
+          <div className="h-full pb-3 box-border uppercase font-semibold text-[7vw] text-zinc-50 border-y-1 border-zinc-50 text-center leading-none ">
             Work
           </div>
 
           {/* //Scroll Div */}
-          <div ref={firstDiv} className="box-border h-1/2 uppercase text-[6vw] text-black font-semibold tracking-tight text-center leading-none bg-[#FFFF00] flex items-center md:gap-76 min-w-[400%]">
+          <div ref={scrollBox} className=" h-full absolute top-0 uppercase text-[6vw] text-black font-semibold tracking-tight text-center leading-none bg-[#FFFF00] flex items-center gap-5 w-[470%] pb-22">
             
-            <div  className="box-border h-full flex pt-1 gap-5 justify-start itmes-center w-fit">
+            <div className="scrollItem box-border h-full flex pt-1 gap-5 justify-start itmes-center w-fit">
+              <h1 className="whitespace-nowrap">See Everything</h1>
+              <img
+                src="./images/work1.jpg"
+                alt="work image"
+                className="w-[13vw] h-[5vw] relative top-2 rounded-full object-contain "
+              />
+              <h1 className="whitespace-nowrap">See Everything</h1>
+              <img
+                src="./images/work2.jpg"
+                alt="work image"
+                className="w-[13vw] h-[5vw] rounded-full relative top-2 object-contain "
+              />
               <h1 className="whitespace-nowrap">See Everything</h1>
               <img
                 src="./images/work1.jpg"
@@ -76,7 +86,19 @@ const FullScreenNav = () => {
               />
             </div>
 
-            <div className="box-border h-full flex pt-1 gap-5 justify-start itmes-center w-fit">
+            <div className="scrollItem box-border h-full flex pt-1 gap-5 justify-start itmes-center w-fit">
+              <h1 className="whitespace-nowrap">See Everything</h1>
+              <img
+                src="./images/work1.jpg"
+                alt="work image"
+                className="w-[13vw] h-[5vw] relative top-2 rounded-full object-contain "
+              />
+              <h1 className="whitespace-nowrap">See Everything</h1>
+              <img
+                src="./images/work2.jpg"
+                alt="work image"
+                className="w-[13vw] h-[5vw] rounded-full relative top-2 object-contain "
+              />
               <h1 className="whitespace-nowrap">See Everything</h1>
               <img
                 src="./images/work1.jpg"
