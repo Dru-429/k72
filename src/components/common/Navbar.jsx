@@ -7,7 +7,7 @@ const Navbar = () => {
   console.log(path)
 
   return (
-  <div className={`${path === '/Fullnav' ? "hidden" : "visible"} z-50 absolute top-0 flex items-start justify-between w-full h-fit`}>
+  <div className={`${path === '/fullnav' ? "hidden" : "visible"} z-50 absolute top-0 flex items-start justify-between w-full h-fit`}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className=" h-10  p-1"
@@ -20,23 +20,29 @@ const Navbar = () => {
         ></path>
       </svg>
 
-      <div className=" w-[12vw] h-10 text-zinc-50 overflow-x-hidden">
-        <div
-          className="bg-black w-[12vw] h-full "
-          onMouseEnter={() => {
-            navRef.current.style.height = "100%";
-          }}
-          onMouseLeave={() => {
-            navRef.current.style.height = "0%";
-          }}
-        >
+      <a href="/fullnav">
+        <div className="cursor-pointer group w-[12vw] h-10 text-zinc-50 overflow-x-hidden">
           <div
-            ref={navRef}
-            className="bg-[#FFFF00] w-[12vw] h-0 absolute top-0 transition-all ease-in-out"
-          ></div>
-          <div></div>
+            className="bg-black w-[12vw] h-full "
+            onMouseEnter={() => {
+              navRef.current.style.height = "100%";
+            }}
+            onMouseLeave={() => {
+              navRef.current.style.height = "0%";
+            }}
+          >
+            <div
+              ref={navRef}
+              className="bg-[#FFFF00] w-[12vw] h-0 absolute top-0 transition-all ease-in-out"
+            ></div>
+
+            <div className="flex flex-col gap-2 relative top-4 z-10 items-end pr-3">
+              <div className="h-[1px] w-12 rounded-md group-hover:bg-zinc-950 bg-zinc-100"></div>
+              <div className="h-[1.5px] w-8 bg-zinc-100 group-hover:bg-zinc-950 rounded-md" ></div>
+            </div>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   );
 };

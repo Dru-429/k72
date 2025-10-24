@@ -74,7 +74,7 @@ const FullScreenNav = () => {
 
 
   return (
-    <div className="w-screen h-screen bg-black">
+    <div className="w-screen h-screen bg-black relative">
       <nav className="w-screen h-fit">
         <div className="flex justify-between w-full p-1 h-12">
           {/* /Logo */}
