@@ -4,12 +4,15 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import Stairs from "./components/common/Stairs.jsx";
+import { PreviousPathProvider } from "./context/PreviousPathContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Stairs>
-        <App />
+        <PreviousPathProvider>
+          <App />
+        </PreviousPathProvider>
       </Stairs>
     </BrowserRouter>
   </StrictMode>

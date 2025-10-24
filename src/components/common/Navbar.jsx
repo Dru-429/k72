@@ -1,11 +1,13 @@
 import { useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
-
-    const navRef = useRef(null)
+  const navRef = useRef(null);
+  const path = useLocation().pathname;
+  console.log(path)
 
   return (
-    <div className="z-50 absolute top-0 flex items-start justify-between w-full h-fit">
+  <div className={`${path === '/Fullnav' ? "hidden" : "visible"} z-50 absolute top-0 flex items-start justify-between w-full h-fit`}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className=" h-10  p-1"
@@ -19,16 +21,19 @@ const Navbar = () => {
       </svg>
 
       <div className=" w-[12vw] h-10 text-zinc-50 overflow-x-hidden">
-        <div 
-            className="bg-black w-[12vw] h-full "
-            onMouseEnter={() => {
-                navRef.current.style.height="100%"
-            }}
-            onMouseLeave={() => {
-                navRef.current.style.height= "0%"
-            }}
+        <div
+          className="bg-black w-[12vw] h-full "
+          onMouseEnter={() => {
+            navRef.current.style.height = "100%";
+          }}
+          onMouseLeave={() => {
+            navRef.current.style.height = "0%";
+          }}
         >
-          <div ref={navRef} className="bg-[#FFFF00] w-[12vw] h-0 absolute top-0 transition-all ease-in-out"></div>
+          <div
+            ref={navRef}
+            className="bg-[#FFFF00] w-[12vw] h-0 absolute top-0 transition-all ease-in-out"
+          ></div>
           <div></div>
         </div>
       </div>

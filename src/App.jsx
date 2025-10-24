@@ -9,13 +9,13 @@ const App = () => {
 
   return (
     <div className="max-w-screen overflow-x-hidden min-h-screen bg-black  text-zinc-950">
-      {/* <Navbar /> */}
-      <FullScreenNav />
-      {/* <Routes>
+      <Navbar />
+      <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/fullnav" element={<FullScreenNav />} />
         <Route path="/agence" element={<Agence />} />
         <Route path="/project" element={<Project />} />
-      </Routes> */}
+      </Routes>
     </div>
   );
 };

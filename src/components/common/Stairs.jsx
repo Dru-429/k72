@@ -43,6 +43,8 @@ const Stairs = (prop) => {
     //     scale: 1.5
     // })
 
+
+
   }, [currentPath]);
 
   return (

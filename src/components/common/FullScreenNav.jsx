@@ -2,10 +2,14 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Observer } from "gsap/all";
 import { useEffect, useRef } from "react";
+import { usePreviousPath } from "../../context/PreviousPathContext";
 
 const FullScreenNav = () => {
   const scrollBoxRef = useRef(null);
   const boxRef = useRef(null);
+  const previousPath = usePreviousPath()
+  
+  console.log(previousPath)
 
   gsap.registerPlugin(Observer);
 
@@ -31,6 +35,7 @@ const FullScreenNav = () => {
     return y < height / 2 ? 1 : 2;
   }
 
+  //Overlay animation
   useEffect(() => {
     const observer = Observer.create({
       target: boxRef.current,
@@ -41,11 +46,11 @@ const FullScreenNav = () => {
         gsap.set(scrollBoxRef.current, {
           yPercent: dir === 2 ? 100 : dir === 1 ? -100 : 0
         });
-        gsap.to(scrollBoxRef.current, { yPercent: 0, duration: 0.3, ease: "power2.out" });
+        gsap.to(scrollBoxRef.current, { yPercent: 0, opacity: 1, duration: 0.3, ease: "power2.out" });
       },
       onHoverEnd: (event) => {
         const dir = getDirection(event, boxRef.current);
-        const props = { duration: 0.3, ease: "power2.in" };
+        const props = { duration: 0.3, ease: "power2.in", opacity: 0 };
         if (dir === 1) props.yPercent = -100;
         else if (dir === 2) props.yPercent = 100;
 
@@ -87,10 +92,12 @@ const FullScreenNav = () => {
             </svg>
           </div>
 
-          <div className=" group flex flex-col h-full justify-center items-center pt-1 cursor-pointer">
-            <div className="h-[2px] w-[5vw]  bg-white group-hover:bg-[#FFFF00]  transition-transform transform rotate-45"></div>
-            <div className="h-[2px] w-[5vw] bg-white group-hover:bg-[#FFFF00] transition-transform transform -rotate-45"></div>
-          </div>
+          <a href={previousPath}>
+            <div className=" group flex flex-col h-full justify-center items-center pt-1 cursor-pointer">
+              <div className="h-[2px] w-[5vw]  bg-white group-hover:bg-[#FFFF00]  transition-transform transform rotate-45"></div>
+              <div className="h-[2px] w-[5vw] bg-white group-hover:bg-[#FFFF00] transition-transform transform -rotate-45"></div>
+            </div>
+          </a>
         </div>
       </nav>
 
@@ -106,7 +113,7 @@ const FullScreenNav = () => {
           {/* //Scroll Box */}
           <div
             ref={scrollBoxRef}
-            className="absolute top-0 h-full w-[470%] uppercase text-[6vw] text-black font-semibold tracking-tight text-center leading-none bg-[#FFFF00] flex items-center gap-5 pb-5"
+            className="opacity-0 absolute top-0 h-full w-[470%] uppercase text-[6vw] text-black font-semibold tracking-tight text-center leading-none bg-[#FFFF00] flex items-center gap-5 pb-5"
           >
             <div className="scrollItem box-border h-full flex gap-5 justify-start itmes-center w-fit">
               <h1 className="whitespace-nowrap">See Everything</h1>
