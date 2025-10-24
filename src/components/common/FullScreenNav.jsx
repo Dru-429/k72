@@ -1,26 +1,58 @@
 import gsap from "gsap";
+import { Observer } from "gsap/all";
 import { useEffect, useRef } from "react";
 
 const FullScreenNav = () => {
+  const scrollBoxRef = useRef(null);
+  const boxRef = useRef(null);
 
-  const scrollBox = useRef(null)
+  gsap.registerPlugin(Observer);
 
+  //Marquee Animation
   useEffect(() => {
-    
-    const items = scrollBox.current.querySelectorAll('.scrollItem')
+    const items = scrollBoxRef.current.querySelectorAll(".scrollItem");
     gsap.to(items, {
       xPercent: -100 * items.length,
       repeat: -1,
       ease: "none",
       duration: 20,
       modifiers: {
-        xPercent: gsap.utils.wrap(-100 * items.length, 0)
-      }
+        xPercent: gsap.utils.wrap(-80 * items.length, 0),
+      },
     });
-  }, [])
+  }, []);
 
-  
-  
+  //Get Direction of mouse enter and mouse exits
+  function getDirection(e, element) {
+    const { top, height } = element.getBoundingClientRect();
+    const y = e.clientY - top;
+    // Top: 1, n Bottom: 2
+    return y < height / 2 ? 1 : 2;
+  }
+
+  useEffect(() => {
+    const observer = Observer.create({
+      target: boxRef.current,
+      type: "pointer",
+
+      onHover: (event) => {
+        const dir = getDirection(event, boxRef.current);
+        gsap.set(scrollBoxRef.current, {
+          yPercent: dir === 2 ? 100 : dir === 1 ? -100 : 0
+        });
+        gsap.to(scrollBoxRef.current, { yPercent: 0, duration: 0.3, ease: "power2.out" });
+      },
+      onHoverEnd: (event) => {
+        const dir = getDirection(event, boxRef.current);
+        const props = { duration: 0.3, ease: "power2.in" };
+        if (dir === 1) props.yPercent = -100;
+        else if (dir === 2) props.yPercent = 100;
+
+        gsap.to(scrollBoxRef.current, props)
+      },
+    });
+    return () => observer.kill()
+  }, []);
 
   return (
     <div className="w-screen h-screen bg-black">
@@ -49,17 +81,19 @@ const FullScreenNav = () => {
       </nav>
 
       {/* /Links */}
-      <div className="w-full h-[80%] overflow-x-hidden pt-20">
+      <div className=" w-full h-[80%] origin-top overflow-x-hidden pt-20">
         {/* /work */}
-        <div className="h-[20%] relative">
-          <div className="h-full pb-3 box-border uppercase font-semibold text-[7vw] text-zinc-50 border-y-1 border-zinc-50 text-center leading-none ">
+        <div ref={boxRef} className="link h-[20%] relative overflow-hidden">
+          <div className="h-full pb-3 box-border uppercase font-semibold text-[7vw] text-zinc-50 border-y-1 border-zinc-50 flex justify-center items-center leading-none">
             Work
           </div>
 
-          {/* //Scroll Div */}
-          <div ref={scrollBox} className=" h-full absolute top-0 uppercase text-[6vw] text-black font-semibold tracking-tight text-center leading-none bg-[#FFFF00] flex items-center gap-5 w-[470%] pb-22">
-            
-            <div className="scrollItem box-border h-full flex pt-1 gap-5 justify-start itmes-center w-fit">
+          {/* //Scroll Box */}
+          <div
+            ref={scrollBoxRef}
+            className="absolute top-0 h-full w-[470%] uppercase text-[6vw] text-black font-semibold tracking-tight text-center leading-none bg-[#FFFF00] flex items-center gap-5 pb-5"
+          >
+            <div className="scrollItem box-border h-full flex gap-5 justify-start itmes-center w-fit">
               <h1 className="whitespace-nowrap">See Everything</h1>
               <img
                 src="./images/work1.jpg"
@@ -86,7 +120,7 @@ const FullScreenNav = () => {
               />
             </div>
 
-            <div className="scrollItem box-border h-full flex pt-1 gap-5 justify-start itmes-center w-fit">
+            <div className="scrollItem box-border h-full flex gap-5 justify-start itmes-center w-fit">
               <h1 className="whitespace-nowrap">See Everything</h1>
               <img
                 src="./images/work1.jpg"
