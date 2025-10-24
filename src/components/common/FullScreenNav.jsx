@@ -1,3 +1,4 @@
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Observer } from "gsap/all";
 import { useEffect, useRef } from "react";
@@ -54,6 +55,19 @@ const FullScreenNav = () => {
     return () => observer.kill()
   }, []);
 
+  useGSAP( ()=> {
+    const tl = gsap.timeline()
+    
+    tl.from('.link', {
+      opacity:0,
+      rotateX: 90,
+      stagger: {
+        amount: 0.2
+      }
+    })
+  } )
+
+
   return (
     <div className="w-screen h-screen bg-black">
       <nav className="w-screen h-fit">
@@ -81,7 +95,8 @@ const FullScreenNav = () => {
       </nav>
 
       {/* /Links */}
-      <div className=" w-full h-[80%] origin-top overflow-x-hidden pt-20">
+      <div className=" w-full h-[80%] origin-top overflow-x-hidden pt-20 flex flex-col gap-5">
+
         {/* /work */}
         <div ref={boxRef} className="link h-[20%] relative overflow-hidden">
           <div className="h-full pb-3 box-border uppercase font-semibold text-[7vw] text-zinc-50 border-y-1 border-zinc-50 flex justify-center items-center leading-none">
@@ -148,6 +163,7 @@ const FullScreenNav = () => {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
