@@ -105,8 +105,9 @@ const FullScreenNav = () => {
       <div className=" w-full h-[80%] origin-top overflow-x-hidden pt-20 flex flex-col gap-5">
 
         {/* /work */}
+
         <div ref={boxRef} className="link h-[20%] relative overflow-hidden">
-          <div className="h-full pb-3 box-border uppercase font-semibold text-[7vw] text-zinc-50 border-y-1 border-zinc-50 flex justify-center items-center leading-none">
+          <div className="h-full pb-3 box-border uppercase font-semibold text-7xl lg:text-[7vw] text-zinc-50 border-y-1 border-zinc-50 flex justify-center items-center leading-none">
             Work
           </div>
 
