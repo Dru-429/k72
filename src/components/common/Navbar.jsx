@@ -10,7 +10,7 @@ const Navbar = () => {
     <div
       className={`${
         path === "/fullnav" ? "hidden" : "visible"
-      } z-50 absolute top-0 flex items-start justify-between w-full h-fit`}
+      } z-30 absolute top-0 flex items-start justify-between w-full h-fit`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

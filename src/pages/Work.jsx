@@ -14,7 +14,7 @@ const Work = () => {
 
   useGSAP(function () {
     gsap.from('.hero', {
-      height: '100px',
+      height: '150px',
       stagger: {
         amount: 0.2
       },
@@ -30,18 +30,18 @@ const Work = () => {
   return (
     <div className='  bg-zinc-100 relative'>
       {/* //Hero section */}
-      <div className="lg:px-4 w-full h-[65vh] flex justify-start items-end gap-2 relative box-border uppercase text-[11.5vw] leading-none font-semibold text-zinc-950">
+      <div className="lg:px-2 w-full h-[50vh] lg:h-[65vh] flex justify-start items-end gap-2 relative box-border uppercase text-7xl lg:text-[11.5vw] leading-none font-semibold text-zinc-950">
         <div className="flex">
           work
-          <p className="text-[2.5vw] relative top-6 ">10</p>
+          <p className="text-5xl lg:text-[2.5vw] relative top-0 lg:top-6 ">10</p>
         </div>
       </div>
 
       {/* //Projects */}
-      <div className='-lg:mt-20 lol lg:px-4'>
+      <div className='-lg:mt-20 lol lg:px-2 mb-20'>
         {projectData.map(function (items, idx) {
           return (
-            <div key={idx} className='hero w-full lg:h-[450px] mb-4 flex lg:flex-row flex-col gap-2'>
+            <div key={idx} className='hero w-full lg:h-[450px] mb-2 flex lg:flex-row flex-col gap-2'>
               <ProjectTitle 
                 image1= {items[0].img_url}
                 link1= {items[0].link}

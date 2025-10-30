@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       {/* Main Footer Content */}
-      <div className="lg:px-4 pt-16 pb-5" >
+      <div className="lg:px-2 pt-16 pb-5" >
         {/* Social Links & Contact */}
         <div className="flex items-center justify-between mb-40">
           {/* Social Media Icons */}
