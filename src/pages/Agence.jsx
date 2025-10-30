@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Footer from "../components/common/Footer";
 
 const Agence = () => {
   const imageDivRef = useRef(null);
@@ -32,7 +33,7 @@ const Agence = () => {
         trigger: imageDivRef.current,
         // markers: true,
         start: "top 20%",
-        end: "top -100%",
+        end: "top -76%",
         pin: true,
         pinSpacing: true,
         pinReparent: true,
@@ -58,7 +59,7 @@ const Agence = () => {
         {/* #Team Images */}
         <div
           ref={imageDivRef}
-          className="h-[20vw] w-[15vw] absolute left-[30vw] top-32 rounded-3xl overflow-hidden "
+          className="lg:h-[20vw] lg:w-[15vw] h-[55vw] w-[40vw] absolute left-[30vw] top-32 rounded-3xl overflow-hidden "
         >
           <img
             ref={imageRef}
@@ -70,16 +71,16 @@ const Agence = () => {
 
         <div className="mb-20">
           {/* #hero section */}
-          <div className="flex min-h-screen  justify-center items-end text-[19vw] leading-none font-semibold text-zinc-950 box-border text-center relative roboto">
-            <div className="relative -bottom-40">
+          <div className="flex min-h-[60vh] lg:min-h-screen justify-center items-end text-[19vw] leading-none font-semibold text-zinc-950 box-border text-center relative roboto">
+            <div className="relative lg:-bottom-40">
               SEVEN7Y <br />
               TWO
             </div>
           </div>
 
           {/* about */}
-          <div className="max-w-full boder-box overflow-x-hidden flex justify-end p-10  mt-44 text-zinc-950 font-semibold text-4xl relative">
-            <div className="w-[60%] text-">
+          <div className="max-w-full boder-box overflow-x-hidden flex justify-end p-10  mt-44 text-zinc-950 font-semibold text-xl lg:text-4xl relative">
+            <div className=" lg:w-[60%] ">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               We’re inquisitive and open-minded, and we make sure creativity
               crowds out ego from every corner. A brand is a living thing, with
@@ -91,9 +92,9 @@ const Agence = () => {
           </div>
 
           {/* #Experties */}
-          <div className="px-40 max-w-ful mt-44 text-zinc-950 font-medium leading-tight">
-            <div className="w-full flex justify-center capitalize">
-              <div className="w-[35%] text-left">Expertise</div>
+          <div className="px-10 lg:px-40 max-w-ful mt-44 text-zinc-950 font-medium leading-tight relative">
+            <div className="w-full flex lg:justify-center justify-between capitalize">
+              <div className="w-[35%] w text-left">Expertise</div>
               <div className="w-[60%] text-left">
                 <ul className="leading-tight">
                   <li>stratagy</li>
@@ -105,21 +106,21 @@ const Agence = () => {
               </div>
             </div>
 
-            <div className="w-full flex justify-center mt-32 ">
-              <div className="w-[35%] text-left">
+            <div className="w-full flex flex-col lg:flex-row gap-5 lg:gap-0 justify-center mt-32 ">
+              <div className="lg:w-[35%] text-left">
                 <p className="w-[80%]">
                   Our Work_ Born in curiosity, raised by dedication and fed with
                   a steady diet of creativity.
                 </p>
               </div>
 
-              <div className="w-[30%] text-left">
+              <div className="lg:w-[30%] text-left">
                 Our Creative_ Simmering in an environment where talent can come
                 to a full boil. Encouraged to become the best versions of
                 ourselves.
               </div>
 
-              <div className="w-[30%] text-left pl-10">
+              <div className="lg:w-[30%] text-left lg:pl-10">
                 Our Culture_ We’re open to each other. Period. The team works
                 together to create a space that makes us proud.
               </div>
@@ -128,7 +129,9 @@ const Agence = () => {
         </div>
       </div>
 
-      <div id="section-2" className="h-screen"></div>
+      <div id="section-2" className=""></div>
+      
+      <Footer />
     </div>
   );
 };
