@@ -34,15 +34,15 @@ const ProjectTitle = ({
           <div className="w-full flex justify-between items-center text-zinc-950 font-semibold text-2xl ">
             <p className=" w-fit relative">
               <span className="z-50 relative">{author1}</span>
-              <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#ffff04] transition-all duration-300 ease-in absolute top-1/2"></div>
+              <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#FFFF00] transition-all duration-300 ease-in absolute top-1/2"></div>
             </p>
             <p className=" w-fit relative">
               <span className="z-50 relative">{}name1</span>
-              <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#ffff04] transition-all duration-300 ease-in absolute top-1/2"></div>
+              <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#FFFF00] transition-all duration-300 ease-in absolute top-1/2"></div>
             </p>
             <p className=" w-fit relative">
               <span className="z-50 relative">{year1}</span>
-              <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#ffff04] transition-all duration-300 ease-in absolute top-1/2"></div>
+              <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#FFFF00] transition-all duration-300 ease-in absolute top-1/2"></div>
             </p>
           </div>
         </div>
@@ -67,15 +67,15 @@ const ProjectTitle = ({
               <div className="w-full flex justify-between items-center text-zinc-950 font-semibold text-2xl ">
                 <p className=" w-fit relative">
                   <span className="z-50 relative">{author2}</span>
-                  <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#ffff04] transition-all duration-300 ease-in absolute top-1/2"></div>
+                  <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#FFFF00] transition-all duration-300 ease-in absolute top-1/2"></div>
                 </p>
                 <p className=" w-fit relative">
                   <span className="z-50 relative">{name2}</span>
-                  <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#ffff04] transition-all duration-300 ease-in absolute top-1/2"></div>
+                  <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#FFFF00] transition-all duration-300 ease-in absolute top-1/2"></div>
                 </p>
                 <p className=" w-fit relative">
                   <span className="z-50 relative">{year2}</span>
-                  <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#ffff04] transition-all duration-300 ease-in absolute top-1/2"></div>
+                  <div className="z-[35] highlighter w-full group-hover:h-[14px] group-hover:opacity-100 opacity-0 h-0 bg-[#FFFF00] transition-all duration-300 ease-in absolute top-1/2"></div>
                 </p>
               </div>
             </div>

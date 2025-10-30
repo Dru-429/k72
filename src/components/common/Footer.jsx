@@ -17,7 +17,7 @@ const Footer = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-zinc-100 text-zinc-100 hover:border-[#FFFF04] hover:text-[#FFFF04] transition-all duration-300"
+              className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-zinc-100 text-zinc-100 hover:border-[#FFFF00] hover:text-[#FFFF00] transition-all duration-300"
             >
               <span className="font-bold text-sm">FB</span>
             </a>
@@ -25,7 +25,7 @@ const Footer = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-zinc-100 text-white hover:border-[#FFFF04] hover:text-[#FFFF04] transition-all duration-300"
+              className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-zinc-100 text-white hover:border-[#FFFF00] hover:text-[#FFFF00] transition-all duration-300"
             >
               <span className="font-bold text-sm">IG</span>
             </a>
@@ -33,7 +33,7 @@ const Footer = () => {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-white text-white hover:border-[#FFFF04] hover:text-[#FFFF04] transition-all duration-300"
+              className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-white text-white hover:border-[#FFFF00] hover:text-[#FFFF00] transition-all duration-300"
             >
               <span className="font-bold text-sm">IN</span>
             </a>
@@ -41,14 +41,14 @@ const Footer = () => {
               href="https://behance.net"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-white text-white hover:border-[#FFFF04] hover:text-[#FFFF04] transition-all duration-300"
+              className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-white text-white hover:border-[#FFFF00] hover:text-[#FFFF00] transition-all duration-300"
             >
               <span className="font-bold text-sm">BE</span>
             </a>
           </div>
 
           {/* Contact Button */}
-          <button className="flex items-center gap-2 px-8 py-3 border-2 border-white rounded-full text-white font-bold hover:border-[#FFFF04] hover:text-[#FFFF04] transition-all duration-300 group">
+          <button className="flex items-center gap-2 px-8 py-3 border-2 border-white rounded-full text-white font-bold hover:border-[#FFFF00] hover:text-[#FFFF00] transition-all duration-300 group">
             <span>CONTACT</span>
             <Heart className="w-5 h-5 group-hover:fill-black" />
           </button>
@@ -66,7 +66,7 @@ const Footer = () => {
           {/* Back to Top */}
           <button
             onClick={scrollToTop}
-            className="text-sm text-zinc-100 font-bold hover:text-[#FFFF04] transition-colors uppercase tracking-wide"
+            className="text-sm text-zinc-100 font-bold hover:text-[#FFFF00] transition-colors uppercase tracking-wide"
           >
             Back to Top
           </button>

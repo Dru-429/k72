@@ -2,7 +2,7 @@ import Video from "./Video"
 
 const TopText = () => {
   return (
-    <div className="text-8xl font-semibold leading-none uppercase text-[#FFFF00] md:text-center relative oswald">
+    <div className="text-5xl lg:text-8xl font-semibold leading-none uppercase text-[#FFFF00] md:text-center relative oswald">
         <div>The spark for</div>
         <div className="flex justify-center items-center ">
             all 
