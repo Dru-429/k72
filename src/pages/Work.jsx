@@ -26,7 +26,7 @@ const Work = () => {
       }
     })
   })
-
+       
   return (
     <div className='  bg-zinc-100 relative'>
       {/* //Hero section */}
