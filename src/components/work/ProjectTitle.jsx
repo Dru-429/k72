@@ -1,36 +1,43 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
-const ProjectTitle = ({index, name, image, link}) => {
-
-  gsap.registerPlugin(ScrollTrigger)
-
-  useGSAP( () => {
-    gsap.from( '.imgWarp',{
-      height: '100px',
-      stagger: 'o.2'
-    })
-  })
-
+const ProjectTitle = ({ image1, link1, name1, author1, year1, image2, link2, name2, author2, year2,}) => {
   return (
-    <div key={index} className=" relative max-w-[49%] lg:h-[450px] box-border min-h-40 group hover:rounded-4xl transition-all duration-200 overflow-hidden ">
-      <img
-        src={image}
-        alt={name} 
-        loading="lazy"
-        className="w-full h-full object-cover group-hover:scale-[105%] transition-all duration-200 "
-      />
+    <>
+      <div className="lg:w-1/2 group transition-all relative rounded-none hover:rounded-3xl overflow-hidden h-full ">
+        <img 
+            className="h-full w-full object-cover" 
+            src={image1} 
+            alt={name1} 
+            loading="lazy"
+        />
 
-      {/* /link */}
-      <a href={link}>
+        {/* //overlay */}
+         <a href={link1}>
         <div className="hidden group-hover:flex transition-all duration-200 w-full h-full absolute top-0  items-center justify-center bg-[#00000068]">
           <div className="text-5xl text-zinc-50 border-2 rounded-3xl px-4 font-semibold uppercase ">
             View Project
           </div>
         </div>
       </a>
-    </div>
+      </div>
+
+      <div className="lg:w-1/2 group transition-all relative rounded-none hover:rounded-3xl overflow-hidden h-full ">
+        <img 
+            className="h-full w-full object-cover" 
+            src={image2} 
+            loading="lazy"
+            alt={name2} 
+        />
+
+        {/* //Overlay */}
+         <a href={link2}>
+        <div className="hidden group-hover:flex transition-all duration-200 w-full h-full absolute top-0  items-center justify-center bg-[#00000068]">
+          <div className="text-5xl text-zinc-50 border-2 rounded-3xl px-4 font-semibold uppercase ">
+            View Project
+          </div>
+        </div>
+      </a>
+      </div>
+    </>
   );
 };
 

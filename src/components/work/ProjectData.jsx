@@ -1,5 +1,5 @@
 const ProjectData = [
-  {
+  [{
     name: "OKA",
     author: "K72 Agency",
     year: "2022",
@@ -14,8 +14,8 @@ const ProjectData = [
     img_url:
     "./images/work4.jpg",
     link: "https://k72.ca/en/work/opto-reseau",
-  },
-  {
+  },],
+  [{
     name: "Everyone's Pharmacy",
     author: "K72 Agency",
     year: "2022",
@@ -28,8 +28,8 @@ const ProjectData = [
     year: "2022",
     img_url: "./images/work2.jpg",
     link: "https://k72.ca/en/work/widescape",
-  },
-  {
+  },],
+  [{
     name: "Coup Fumant",
     author: "K72 Agency",
     year: "2021",
@@ -44,8 +44,8 @@ const ProjectData = [
     img_url:
       "./images/work6.jpg",
     link: "https://k72.ca/en/work/la-coop-federee-becomes-sollio-groupe-cooperatif",
-  },
-  {
+  },],
+  [{
     name: "Shelton",
     author: "K72 Agency",
     year: "2020",
@@ -60,8 +60,9 @@ const ProjectData = [
     img_url:
       "./images/work8.jpg",
     link: "https://k72.ca/en/work/best",
-  },
-  {
+  },],
+
+ [ {
     name: "À table avec l'histoire",
     author: "K72 Agency",
     year: "2021",
@@ -76,7 +77,7 @@ const ProjectData = [
     img_url:
       "./images/work10.jpg",
     link: "https://k72.ca/en/work/la-coop-federee-becomes-sollio-groupe-cooperatif",
-  },
+  }],
 ];
 
 export default ProjectData;
