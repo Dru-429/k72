@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import ProjectTitle from '../components/work/ProjectTitle'
 import ProjectData from '../components/work/ProjectData'
+import Footer from '../components/common/Footer'
 
 
 const Work = () => {
@@ -27,9 +28,9 @@ const Work = () => {
   })
 
   return (
-    <div className='lg:p-4  bg-zinc-100'>
+    <div className='  bg-zinc-100 relative'>
       {/* //Hero section */}
-      <div className="w-full h-[65vh] flex justify-start items-end gap-2 relative box-border uppercase text-[11.5vw] leading-none font-semibold text-zinc-950">
+      <div className="lg:px-4 w-full h-[65vh] flex justify-start items-end gap-2 relative box-border uppercase text-[11.5vw] leading-none font-semibold text-zinc-950">
         <div className="flex">
           work
           <p className="text-[2.5vw] relative top-6 ">10</p>
@@ -37,7 +38,7 @@ const Work = () => {
       </div>
 
       {/* //Projects */}
-      <div className='-lg:mt-20 lol'>
+      <div className='-lg:mt-20 lol lg:px-4'>
         {projectData.map(function (items, idx) {
           return (
             <div key={idx} className='hero w-full lg:h-[450px] mb-4 flex lg:flex-row flex-col gap-2'>
@@ -60,6 +61,7 @@ const Work = () => {
         })}
 
       </div>
+      <Footer />
     </div>
   )
 }
