@@ -10,7 +10,7 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="lg:px-2 pt-16 pb-5" >
         {/* Social Links & Contact */}
-        <div className="flex items-center justify-between mb-40">
+        <div className=" px-2 lg:px-0 box-border flex items-center justify-between mb-40">
           {/* Social Media Icons */}
           <div className="flex gap-4">
             <a
@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Button */}
-          <button className="flex items-center gap-2 px-8 py-3 border-2 border-white rounded-full text-white font-bold hover:border-[#FFFF00] hover:text-[#FFFF00] transition-all duration-300 group">
+          <button className=" box-border flex items-center gap-2 px-8 py-3 border-2 border-white rounded-full text-white font-bold hover:border-[#FFFF00] hover:text-[#FFFF00] transition-all duration-300 group">
             <span>CONTACT</span>
             <Heart className="w-5 h-5 group-hover:fill-black" />
           </button>
@@ -57,7 +57,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="border-t border-gray-700 pt-8 flex items-center justify-between">
           {/* Location & Time */}
-          <div className="flex items-center gap-2 text-sm text-zinc-100">
+          <div className="px-2 lg:px-0 flex items-center gap-2 text-sm text-zinc-100">
             <Globe className="w-4 h-4" />
             <span>MONTREAL_04:09:09</span>
           </div>
@@ -66,7 +66,7 @@ const Footer = () => {
           {/* Back to Top */}
           <button
             onClick={scrollToTop}
-            className="text-sm text-zinc-100 font-bold hover:text-[#FFFF00] transition-colors uppercase tracking-wide"
+            className="px-2 lg:px-0 text-sm text-zinc-100 font-bold hover:text-[#FFFF00] transition-colors uppercase tracking-wide"
           >
             Back to Top
           </button>

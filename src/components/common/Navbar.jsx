@@ -25,9 +25,9 @@ const Navbar = () => {
       </svg>
 
       <a href="/fullnav">
-        <div className="cursor-pointer group w-[12vw] h-10 text-zinc-50 overflow-x-hidden">
+        <div className="cursor-pointer group w-[15vw] lg:w-[12vw] h-10 text-zinc-50 overflow-x-hidden">
           <div
-            className="bg-black w-[12vw] h-full "
+            className="bg-black w-[15vw] lg:w-[12vw] h-full "
             onMouseEnter={() => {
               navRef.current.style.height = "100%";
             }}
@@ -40,7 +40,7 @@ const Navbar = () => {
               className="bg-[#FFFF00] w-[12vw] h-0 absolute top-0 transition-all ease-in-out"
             ></div>
 
-            <div className="flex flex-col gap-2 relative top-4 z-10 items-end pr-3">
+            <div className="flex flex-col gap-2 relative top-4 z-10 items-end pr-0 lg:pr-3 ">
               <div className="h-[1px] w-12 rounded-md group-hover:bg-zinc-950 bg-zinc-100"></div>
               <div className="h-[1.5px] w-8 bg-zinc-100 group-hover:bg-zinc-950 rounded-md"></div>
             </div>
