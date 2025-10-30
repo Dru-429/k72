@@ -15,14 +15,14 @@ const Home = () => {
           {/* top text */}
           <TopText />
         </div>
-        <div className=" text-lg lg:text-xs tracking-tighter text-[#FFFF00]/90 bg-[#f6f6b022] lg:bg-none lg:text-[#FFFF00]/70 lg:max-w-3xl mx-auto lg:w-1/6 w-full lg:absolute top-1/2 right-0 text-left selection:bg-[#FFFF00]/80 selection:text-black">
+        <div className=" text-lg lg:text-xs tracking-tighter text-[#FFFF00]/90 bg-[#f6f6b022] lg:bg-[#f6f6b000] lg:text-[#FFFF00]/70 lg:max-w-3xl mx-auto lg:w-1/6 w-full lg:absolute top-1/2 right-0 text-left selection:bg-[#FFFF00]/80 selection:text-black">
           K72 is an agency that builds brands from every angle. Today, tomorrow
           and years from now. We think the best sparks fly when comfort zones
           get left behind and friction infuses our strategies, brands and
           communications with real feeling. We’re transparent, honest and say
           what we mean, and when we believe in something, we’re all in.
         </div>
-        <div className="rotate-180">
+        <div className="rotate-180 lg:rotate-0">
           {/* bottom Buttons */}
           <BottomLinks />
         </div>
