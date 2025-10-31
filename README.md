@@ -9,6 +9,7 @@ A modern, high-performance portfolio website with smooth scroll animations and i
 ## Overview
 
 K72 is a creative agency building brands with premium web experiences. This portfolio showcases project work with cutting-edge animations, smooth scrolling, and minimalist design.
+<img width="1906" height="816" alt="image" src="https://github.com/user-attachments/assets/0209d521-d718-4d51-96e6-c8e98d875364" />
 
 ---
 
