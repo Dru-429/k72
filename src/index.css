@@ -1,11 +1,12 @@
-@import "tailwindcss"; 
+@import "tailwindcss";
 
-.oswald{
+.oswald {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
 }
 
-.roboto{
+.roboto {
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
 }
+
